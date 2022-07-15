@@ -11,6 +11,6 @@ class posa extends Model
     protected $table = 'posas';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'jmlh_putih', 'jmlh_merah', 'jmlh_tiger'
+        'jmlh_putih', 'jmlh_merah', 'jmlh_tiger', 'total'
     ];
 }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('jmlh_merah');
             $table->string('jmlh_putih');
             $table->string('jmlh_tiger');
+            $table->string('total');
             $table->timestamps();
         });
     }

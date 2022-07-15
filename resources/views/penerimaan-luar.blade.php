@@ -58,18 +58,37 @@
         <!--start content-->
         <main class="page-content">
             <!--breadcrumb-->
-            <div class="mb-3">
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
                 <b>
-                    <div class="breadcrumb-title">PT. BARTUH TAB A</div>
+                    <div class="breadcrumb-title pe-3">PT. BARTUH</div>
                 </b>
+                <div class="ps-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0 p-0">
+                            <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Penerimaan Luar Tab A
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
             <!--end breadcrumb-->
-            <form method="POST" action="{{route('posa.store')}}" enctype="multipart/form-data">   
+            <form method="post" action="{{route('posa.index')}}">   
                 @csrf
             <div class="card">
                 <div class="card-header py-3">
                     <div class="row g-3 align-items-center">
-                      
+                    <div class="col-12 col-lg-3 col-6 col-md-3">
+                            {{-- <select class="form-select">
+                                <option>Supplier</option>
+                                <option>Nelayan A</option>
+                                <option>Nelayan B</option>
+                                <option>Nelayan C</option>
+                                <option>Nelayan D</option>
+                                <option>Nelayan E</option>
+                            </select> --}}
+                        </div>
                         <div class="d-sm-flex justify-content-between align-items-center transaparent-tab-border {">
                   <ul class="nav nav-tabs tab-transparent" role="tablist">
                     <li class="nav-item">
@@ -117,21 +136,21 @@
                                                     <td>
                                                     <div class="input-group button-container">
                                                             <button type="button" value="-"
-                                                                class="button-minus cart-qty-minus">-</button>
+                                                                class="button-minus cart-qty-minus" onclick="myFunctions()">-</button>
                                                                 <div class="product-box">
                                                                     <img src="assets/images/merah.jpg" alt="">
                                                                 </div>
                                                                 <div>
                                                                     <p  class="merah mt-5" style="text-align:center">Merah</p>
                                                                 </div>
-                                                            <input type="number" min="0" max="" value="0" name="jmlh_merah"
+                                                            <input type="number" min="0" max="" id="myText"  value="0" name="jmlh_merah"
                                                                 class="quantity-field qty" hidden>
                                                                 
                                                             <button type="button" value="-"
-                                                                class="button-plus cart-qty-plus">+</button>
+                                                                class="button-plus cart-qty-plus" onclick="myFunction()">+</button>
 
                                                             <button type="button" value="-"
-                                                                class="button-minus cart-qty-clear">x</button><br>
+                                                                class="button-minus cart-qty-clear" onclick="myFunctionx()">x</button><br>
                                                                 <input type=" text" value="1" class="price"
                                                                 disabled hidden>
                                                         </div>
@@ -142,26 +161,25 @@
                                                     <td>
                                                     <div class="input-group button-container">
                                                             <button type="button" value="-"
-                                                                class="button-minus cart-qty-minus">-</button>
+                                                                class="button-minus cart-qty-minus" onclick="myFunction11()">-</button>
                                                                 <div class="product-box">
                                                                     <img src="assets/images/pth.jpg" alt="">
                                                                 </div>
                                                                 <div>
                                                                     <p  class="merah mt-5" style="text-align:center">Putih</p>
                                                                 </div>
-                                                            <input type="number" min="0" max="" value="0" name="jmlh_putih"
+                                                            <input type="number" min="0" max="" id="myText1" value="0" name="jmlh_putih"
                                                                 class="quantity-field qty" hidden>
                                                                 
                                                             <button type="button" value="-"
-                                                                class="button-plus cart-qty-plus">+</button>
+                                                                class="button-plus cart-qty-plus" onclick="myFunction1()">+</button>
 
                                                             <button type="button" value="-"
-                                                                class="button-minus cart-qty-clear">x</button><br>
+                                                                class="button-minus cart-qty-clear" onclick="myFunction111()">x</button><br>
                                                                 
                                                             <input type=" text" value="1" class="price"
                                                                 disabled hidden>
-                                                                
-                                                              
+                                                                                                        
                                                         </div>
                                                     </td>                                                     
                                                 </tr>
@@ -170,25 +188,26 @@
                                                     <td>
                                                     <div class="input-group button-container">
                                                             <button type="button" value="-"
-                                                                class="button-minus cart-qty-minus">-</button>
+                                                                class="button-minus cart-qty-minus" onclick="myFunction22()">-</button>
                                                                 <div class="product-box">
                                                                     <img src="assets/images/tigr.jpg" alt="">
                                                                 </div>
                                                                 <div>
                                                                 <p  class="merah mt-5" style="text-align:center">Tiger</p>
                                                                 </div>
-                                                            <input type="number" min="0" max="" value="0" name="jmlh_tiger"
+                                                            <input type="number" min="0" max="" id="myText2"  value="" name="jmlh_tiger"
                                                                 class="quantity-field qty" hidden>
                                                             <button type="button" value="-"
-                                                                class="button-plus cart-qty-plus">+</button>
+                                                                class="button-plus cart-qty-plus" onclick="myFunction2()" >+</button>
                                                             <button type="button" value="-"
-                                                                class="button-minus cart-qty-clear">x</button>
+                                                                class="button-minus cart-qty-clear" onclick="myFunction222()">x</button>
                                                             <input type=" text" value="1" class="price"
                                                                 disabled hidden>
                                                                 
                                                         </div>
                                                     </td>
                                                 </tr>
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -198,17 +217,49 @@
                         <div class="col-12 col-lg-4">
                             <div class="card border shadow-none bg-light radius-10">
                                 <div class="card-body">
-                                    <div class="d-flex align-items-center mb-4">
-                            </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div>                                            
+                                           
+                                        </div>
+
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div>                                            
+                                            <p class="mb-0">Merah</p>
+                                        </div>
+                                        <div class="ms-auto">
+                                        <h5 class="mb-0" id="demo">0</h5>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div>                                            
+                                            <p class="mb-0">Putih</p>
+                                        </div>
+                                        <div class="ms-auto">
+                                            <h5 class="mb-0" id="demo1">0</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div>                                            
+                                            <p class="mb-0">Tiger</p>
+                                        </div>
+                                        <div class="ms-auto">
+                                            <h5 class="mb-0"  id="demo2">0</h5>
+                                        </div>
+                                    </div>
+                                   
                                     <div class="d-flex align-items-center mb-3">
                                         <div>                                            
                                             <p class="mb-0">Total</p>
                                         </div>
                                         <div class="ms-auto">
-                                            <h5 class="mb-0" id="total">0</h5>
-                                        </div>
+                                            <h5 class="mb-0" name="total" id="total">0</h5>
                                         </div>
                                     </div>
+                                </div>
                             </div>
 
                             <div class="btn-group">
@@ -231,6 +282,7 @@
         </main>
         <!--end page main-->
 
+        
 
         <!--start overlay-->
         <div class="overlay nav-toggle-icon"></div>

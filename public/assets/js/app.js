@@ -70,6 +70,60 @@ function update_amounts() {
     $('#item').text('' + sum);
 }
 
+  function myFunction() {
+	var x = document.getElementById("myText").value;
+	x++;
+	document.getElementById("demo").innerHTML = x;
+  }
+  
+  function myFunctions() {
+	var x = document.getElementById("myText").value;
+	x--;
+	document.getElementById("demo").innerHTML = x;
+  }
+  
+  function myFunctionx() {
+	var x = document.getElementById("myText").value;
+	x=0;
+	document.getElementById("demo").innerHTML = x;
+  }
+  
+  function myFunction1() {
+	var x = document.getElementById("myText1").value;
+	x++;
+	document.getElementById("demo1").innerHTML = x;
+  }
+  
+  function myFunction11() {
+	var x = document.getElementById("myText1").value;
+	x--;
+	document.getElementById("demo1").innerHTML = x;
+  }
+  
+  function myFunction111() {
+	var x = document.getElementById("myText1").value;
+	x=0;
+	document.getElementById("demo1").innerHTML = x;
+  }
+  
+  function myFunction2() {
+	var x = document.getElementById("myText2").value;
+	x++;
+	document.getElementById("demo2").innerHTML = x;
+  }
+  
+  function myFunction22() {
+	var x = document.getElementById("myText2").value;
+	x--;
+	document.getElementById("demo2").innerHTML = x;
+  }
+  
+  function myFunction222() {
+	var x = document.getElementById("myText2").value;
+	x=0;
+	document.getElementById("demo2").innerHTML = x;
+  }
+
 var incrementQty;
 var decrementQty;
 var clearQty;
